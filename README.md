@@ -14,4 +14,4 @@ Discord Bot : League of Legend player information search bot
 
     - !코로나
     
-    ![img](https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/90351298_1163756910634207_7768804245926576128_n.jpg?_nc_cat=100&_nc_sid=8024bb&_nc_ohc=xR90lJqkBlAAX_5bm2P&_nc_ht=scontent-ssn1-1.xx&oh=1019835accd80aa21639fc53bee0d9a4&oe=5EA229C5)
+    ![img](https://scontent-ssn1-1.xx.fbcdn.net/v/t1.0-9/91051526_1165154833827748_8728916057206554624_n.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=FNn7V-Ha8pYAX92dD8g&_nc_ht=scontent-ssn1-1.xx&oh=4ccf25a7b0dbe9927e03b2fa39a7a39b&oe=5EA4954F)
