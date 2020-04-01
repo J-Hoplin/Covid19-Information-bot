@@ -74,7 +74,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         embed.add_field(name="치사율", value=str(lethatRate) + " %",inline=True)
         embed.add_field(name="- 최신 브리핑 1 : " + briefTasks[0][0],value="Link : " + briefTasks[0][1],inline=False)
         embed.add_field(name="- 최신 브리핑 2 : " + briefTasks[1][0], value="Link : " + briefTasks[1][1], inline=False)
-        embed.set_thumbnail(url="https://ww.namu.la/s/90fc57e8957024083e7745a8d46ade60e98b7d9b244b5c7d033b815c77eac0930af09691fe4a03953c8425c45ce5335ce340bf20634092f1ed191c52e269794070f3e4febe4412eb8277352b72de00f8d210a279531f0229fb8e5ec77dddcf31413b8a4eaddf8d1624e15a8907e3ae32")
+        embed.set_thumbnail(url="https://wikis.krsocsci.org/images/7/79/%EB%8C%80%ED%95%9C%EC%99%95%EA%B5%AD_%ED%83%9C%EA%B7%B9%EA%B8%B0.jpg")
         embed.set_footer(text='Service provided by Hoplin.',
                          icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
         await message.channel.send("Covid-19 Virus Korea Status", embed=embed)
