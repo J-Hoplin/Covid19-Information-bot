@@ -1,0 +1,4 @@
+discord
+lxml
+bs4
+pytz
