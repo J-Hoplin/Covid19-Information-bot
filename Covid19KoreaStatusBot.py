@@ -1,6 +1,5 @@
 import discord
 import asyncio
-import os
 from discord.ext import commands
 import urllib
 from urllib.request import URLError
@@ -15,7 +14,7 @@ import requests
 import time
 
 client = discord.Client() # Create Instance of Client. This Client is discord server's connection to Discord Room
-bottoken = ""
+bottoken = "NzI1MzQzNjQ3NjM3MTc2MzUw.XvNW6Q.MQr4718E-5ucvzCCJXX9_UjKVl0"
 
 
 @client.event # Use these decorator to register an event.
@@ -62,7 +61,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
 
         totalPeopletoInt = statNum[0].split(')')[-1].split(',')
         tpInt = ''.join(totalPeopletoInt)
-        lethatRate = round((int(statNum[3]) / int(tpInt)) * 100, 2)
+        lethatRate = round((int(''.join(''.join(statNum[3].split(',')).lstrip("'").rstrip("'"))) / int(tpInt)) * 100, 2)
         embed = discord.Embed(title="Covid-19 Virus Korea Status", description="",color=0x5CD1E5)
         embed.add_field(name="Data source : Ministry of Health and Welfare of Korea", value="http://ncov.mohw.go.kr/index.jsp", inline=False)
         embed.add_field(name="Latest data refred time",value="해당 자료는 " + latestupdateTime[0] + "월 " + latestupdateTime[1] + "일 "+latestupdateTime[2] +" 자료입니다.", inline=False)
