@@ -14,7 +14,7 @@ Discord Bot : Covid19 Korea Status Information bot
     - Web Scraping Version : [Ministry of Health and Welfare of Korea](http://ncov.mohw.go.kr/index.jsp)
     - API using Version : [Korea Public Data Protal](https://www.data.go.kr/index.do)
 
-5 . Web Scraping Version은 보건복지부 사이트 구조 변동에 의해 버그가 수시로 일어날 가능성이 있습니다. API를 이용하여 만든 버전 사용을 적극 권장드립니다
+5 . Web Scraping Version은 보건복지부 사이트 구조 변동에 의해 버그가 수시로 일어날 가능성이 있습니다. [API를 이용하여 만든 버전 사용](https://github.com/J-hoplin1/Covid19-Information-bot/tree/master/Using%20Public%20API)을 적극 권장드립니다
 ***
 
 - How to Use?
