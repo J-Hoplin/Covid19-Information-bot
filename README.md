@@ -32,8 +32,8 @@ Discord Bot : Covid19 Korea Status Information bot
 
 3. 인증키를 받고 활용신청을 합니다.
 
-4. 활용신청이 승인 되면, 자신의 공공데이터 API키를 CovidData.py init메소드의 apikey변수에 넣어주시기 바랍니다.
-
+4. 활용신청이 승인 되면, 자신의 공공데이터 API키를 CovidData.py init메소드의 apikey변수에 넣어주시기 바랍니다. 여기서 API키를 넣을때는 일반인증키(Decoding)을 
+ 
 5. 결과
     
     ![img](img/2.png)
