@@ -13,7 +13,7 @@ from xml.dom import minidom
 
 class openDataAPICall(object):
     def __init__(self) -> None:
-        self.apiKey = 'bj9OInFd8JfcavWNdVhUfOLalfpaYG1N6wqkFTbKVzPwR0EkEj5pL55HrsPX6Nye4gREdN3InXTi2pv39h%2FgTQ%3D%3D'
+        self.apiKey = ''
         self.apiURL = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'
     
     def buildRequests(self) -> bool: 
