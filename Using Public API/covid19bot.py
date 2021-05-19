@@ -13,7 +13,7 @@ import time
 from CovidData import openDataAPICall
 
 client = discord.Client() # Create Instance of Client. This Client is discord server's connection to Discord Room
-bottoken = ""
+bottoken = "NzI1MzQzNjQ3NjM3MTc2MzUw.XvNW6Q.LIkBipkce-FtG_3_DepI9h7PC4I"
 getCovidData = openDataAPICall()
 
 @client.event # Use these decorator to register an event.
@@ -34,6 +34,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
             embed = discord.Embed(title="Covid-19 Virus Korea Status : 아직 업데이트 되지 않음", description="",color=0x5CD1E5)
             embed.add_field(name="Data source : 공공데이터 포털(data.go.kr) API", value="API정보 : 공공데이터활용지원센터_보건복지부 코로나19 감염 현황", inline=False)
             embed.add_field(name="금일 정보가 아직 업데이트 되지 않았습니다!", value="아직 최신정보를 불러오지 못하였습니다. 평균 업데이트 시간은 오전 10시에서 11시사이입니다.", inline=False)
+            embed.add_field(name="다음과 같은 이유로 불러오지 못할 수 도 있습니다", value="1. API 점검 기간\n2. 로직 내 버그\n3. API 일일호출 초과\n* 이러한 경우 운영자에게 문의해주시기 바랍니다.", inline=False)
             embed.add_field(name="중앙방역대책본부 코로나감염증 홈페이지 접속하기",value="http://ncov.mohw.go.kr/index.jsp",inline=False)
             embed.set_thumbnail(url="https://wikis.krsocsci.org/images/7/79/%EB%8C%80%ED%95%9C%EC%99%95%EA%B5%AD_%ED%83%9C%EA%B7%B9%EA%B8%B0.jpg")
             embed.set_footer(text='Service provided by Hoplin.',icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')

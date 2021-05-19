@@ -12,11 +12,11 @@ import xml.etree.ElementTree as et
 from xml.dom import minidom 
 
 class openDataAPICall(object):
-    def __init__(self):
-        self.apiKey = ''
+    def __init__(self) -> None:
+        self.apiKey = 'bj9OInFd8JfcavWNdVhUfOLalfpaYG1N6wqkFTbKVzPwR0EkEj5pL55HrsPX6Nye4gREdN3InXTi2pv39h%2FgTQ%3D%3D'
         self.apiURL = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'
     
-    def buildRequests(self) -> BeautifulSoup: 
+    def buildRequests(self) -> bool: 
         # 코드 실행한 시점
         executedPoint = datetime.now(timezone('Asia/Seoul'))
         endDate = executedPoint + timedelta(days = 1)# 하루뒤의 시간을 의미한다.
@@ -62,13 +62,17 @@ class openDataAPICall(object):
         sounds.append(hotIssues)
         return sounds
     
-    def reProcessXML(self,BSXML : BeautifulSoup) -> None:
-        res = BSXML# lxml-xml 매우빠르고 유일하게 지원되는 XML파서이다.
-        item = res.findAll('item')
-        dayBefore = item[1]
-        today = item[0]
-        news = self.addMainNews()
-
+    def reProcessXML(self,BSXML : BeautifulSoup) -> bool:
+        # 만약 XML파싱 시에 오류가 나는 경우 -> API점검 혹은 아직 불러오지 못한 경우
+        try:
+            res = BSXML# lxml-xml 매우빠르고 유일하게 지원되는 XML파서이다.
+            item = res.findAll('item')
+            dayBefore = item[1]
+            today = item[0]
+            news = self.addMainNews()
+        except BaseException:
+            return False
+    
         # 브리핑 관련 데이터
         briefings = news[0]
         briefTopics = list(briefings.keys())
