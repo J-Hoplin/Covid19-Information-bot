@@ -28,7 +28,7 @@ Discord Bot : Covid19 Korea Status Information bot
 
 2. 이 코로나 봇에서는 '공공데이터활용지원센터_보건복지부 코로나19 감염 현황' API를 활용하였습니다.
 
-    ![img](Using Public API/img/1.png)
+    ![img](img/1.png)
 
 3. 인증키를 받고 활용신청을 합니다.
 
@@ -36,13 +36,13 @@ Discord Bot : Covid19 Korea Status Information bot
 
 5. 결과
     
-    ![img](Using Public API/img/2.png)
+    ![img](img/2.png)
 
 ### Web Scraping 버전을 사용하는 방법
 
 - Discord API키를 넣어주시기만 하면 됩니다.
 
-    ![img](1.jpg)
+    ![img](img/3.jpg)
 
 
     
