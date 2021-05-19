@@ -13,7 +13,7 @@ import time
 from CovidData import openDataAPICall
 
 client = discord.Client() # Create Instance of Client. This Client is discord server's connection to Discord Room
-bottoken = "NzI1MzQzNjQ3NjM3MTc2MzUw.XvNW6Q.LIkBipkce-FtG_3_DepI9h7PC4I"
+bottoken = ""
 getCovidData = openDataAPICall()
 
 @client.event # Use these decorator to register an event.
