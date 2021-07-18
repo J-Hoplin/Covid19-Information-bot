@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import os
+import yaml
 from discord.ext import commands
 import urllib
 from urllib.request import URLError, HTTPError, urlopen, Request
@@ -12,9 +13,12 @@ import requests
 import time
 from CovidData import openDataAPICall
 
+with open('config.yml') as f:
+    keys = yaml.load(f, Loader=yaml.FullLoader)
+
 client = discord.Client() # Create Instance of Client. This Client is discord server's connection to Discord Room
-bottoken = ""
-getCovidData = openDataAPICall()
+bottoken = keys['Keys']['discordAPIToken']
+getCovidData = openDataAPICall(keys['Keys']['publickey'])
 
 @client.event # Use these decorator to register an event.
 async def on_ready(): # on_ready() event : when the bot has finised logging in and setting things up
@@ -25,7 +29,6 @@ async def on_ready(): # on_ready() event : when the bot has finised logging in a
 async def on_message(message): # on_message() event : when the bot has recieved a message
     #To user who sent message
     # await message.author.send(msg)
-    print(message.content)
     if message.author == client.user:
         return
     if message.content.startswith("!코로나"):

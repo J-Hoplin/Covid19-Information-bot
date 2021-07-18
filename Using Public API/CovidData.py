@@ -12,8 +12,8 @@ import xml.etree.ElementTree as et
 from xml.dom import minidom 
 
 class openDataAPICall(object):
-    def __init__(self) -> None:
-        self.apiKey = ''
+    def __init__(self,apiKey) -> None:
+        self.apiKey = apiKey
         self.apiURL = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'
     
     def buildRequests(self) -> bool: 
